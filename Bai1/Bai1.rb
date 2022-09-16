@@ -11,7 +11,8 @@ number1 = gets
 number2 = gets
 if(number1>number2)
   print "So lon la : "+number1
-elseif(number1<number2)
+elsif(number1<number2)
   print "So lon la: "+number2
 else
   print "2 so bang nhau"
+end
