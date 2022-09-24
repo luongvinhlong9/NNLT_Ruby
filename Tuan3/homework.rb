@@ -53,7 +53,7 @@ student1.averageGrade
 student2.show
 student2.averageGrade
 
-Sarray = [student1,student2]
-Sarray = Sarray.sort_by{|index| [index.averageGrade]}
-Sarray = Sarray.reverse
-puts "Sap xem theo diem \n :#{Sarray}"
+stds = [student1,student2]
+stds = stds.sort_by{|index| [index.averageGrade]}
+stds = stds.reverse
+puts "Sap xem theo diem \n :#{stds}"
