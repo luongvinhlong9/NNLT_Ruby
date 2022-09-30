@@ -53,6 +53,7 @@ class QLCB
     gioiTinh = gets
     diaChi = gets
     canbo = CanBo.new(hoTen, tuoi, gioiTinh, diaChi)
+    array.push(canbo)
   end
   def timKiem(array)
     puts "Nhập từ khóa"
