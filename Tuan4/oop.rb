@@ -1,86 +1,86 @@
 class CanBo
-  attr_accessor :hoTen, :tuoi, :gioiTinh, :diaChi
-  def initialize(hoTen, tuoi, gioiTinh, diaChi)
-    @hoTen = hoTen
-    @tuoi = tuoi
-    @gioiTinh = gioiTinh
-    @diaChi = diaChi
+  attr_accessor :hoTen135, :tuoi135, :gioiTinh135, :diaChi135
+  def initialize(hoTen135, tuoi135, gioiTinh135, diaChi135)
+    @hoTen135 = hoTen135
+    @tuoi135 = tuoi135
+    @gioiTinh135 = gioiTinh135
+    @diaChi135 = diaChi135
   end
 end
 # Xây dựng các lớp CongNhan, KySu, NhanVien kế thừa từ lớp CanBo.
 
 class CongNhan < CanBo
-  attr_accessor :capBac
-  def initialize(hoTen, tuoi, gioiTinh, diaChi, capBac)
-    super(hoTen, tuoi, gioiTinh, diaChi)
-    @capBac = capBac
+  attr_accessor :capBac135
+  def initialize(hoTen135, tuoi135, gioiTinh135, diaChi135, capBac135)
+    super(hoTen135, tuoi135, gioiTinh135, diaChi135)
+    @capBac135 = capBac135
   end
   def show
     super()
-    "Tên: #{@hoTen} Tuổi: #{@tuoi} Giới tính: #{@gioiTinh} Địa chỉ: #{@diaChi} Cấp bậc: #{@capBac}"
+    "Tên: #{@hoTen135} Tuổi: #{@tuoi135} Giới tính: #{@gioiTinh135} Địa chỉ: #{@diaChi135} Cấp bậc: #{@capBac135}"
   end
 end
 
 class KySu < CanBo
-  attr_accessor :nganhDaoTao
-  def initialize(hoTen, tuoi, gioiTinh, diaChi, nganhDaoTao)
-    super(hoTen, tuoi, gioiTinh, diaChi)
-    @nganhDaoTao = nganhDaoTao
+  attr_accessor :nganhDaoTao135
+  def initialize(hoTen135, tuoi135, gioiTinh135, diaChi135, nganhDaoTao135)
+    super(hoTen135, tuoi135, gioiTinh135, diaChi135)
+    @nganhDaoTao135 = nganhDaoTao135
   end
   def show
     super()
-    "Tên: #{@hoTen} Tuổi: #{@tuoi} Giới tính: #{@gioiTinh} Địa chỉ: #{@diaChi} Ngành đào tạo: #{@nganhDaoTao}"
+    "Tên: #{@hoTen135} Tuổi: #{@tuoi135} Giới tính: #{@gioiTinh135} Địa chỉ: #{@diaChi135} Ngành đào tạo: #{@nganhDaoTao135}"
   end
 end
 
 class NhanVien < CanBo
-  attr_accessor :congViec
-  def initialize(hoTen, tuoi, gioiTinh, diaChi, congViec)
-    super(hoTen, tuoi, gioiTinh, diaChi)
-    @congViec = congViec
+  attr_accessor :congViec135
+  def initialize(hoTen135, tuoi135, gioiTinh135, diaChi135, congViec135)
+    super(hoTen135, tuoi135, gioiTinh135, diaChi135)
+    @congViec135 = congViec135
   end
   def show
     super()
-    "Tên: #{@hoTen} Tuổi: #{@tuoi} Giới tính: #{@gioiTinh} Địa chỉ: #{@diaChi} Công việc: #{@congViec}"
+    "Tên: #{@hoTen135} Tuổi: #{@tuoi135} Giới tính: #{@gioiTinh135} Địa chỉ: #{@diaChi135} Công việc: #{@congViec135}"
   end
 end
 
 class QLCB
-  def themMoi(array)
+  def themMoi(array135)
     puts "Nhập họ tên, tuổi, giới tính, địa chỉ cán bộ"
-    hoTen = gets
-    tuoi = gets
-    gioiTinh = gets
-    diaChi = gets
-    canbo = CanBo.new(hoTen, tuoi, gioiTinh, diaChi)
-    array.push(canbo)
+    hoTen135 = gets
+    tuoi135 = gets
+    gioiTinh135 = gets
+    diaChi135 = gets
+    canbo = CanBo.new(hoTen135, tuoi135, gioiTinh135, diaChi135)
+    array135.push(canbo)
   end
-  def timKiem(array)
+  def timKiem(array135)
     puts "Nhập từ khóa"
-    keywork = gets
-    for i in array
-      if keywork == i.name
+    keywork135 = gets
+    for i in array135
+      if keywork135 == i.name
         puts "True"
       end
     end
   end
-  def hienDanhSach(array)
-    for i in array
-      puts "Tên: #{@i.name} Tuổi: #{@i.tuoi} Giới tính: #{@i.gioiTinh} Địa chỉ: #{@i.diaChi}"
+  def hienDanhSach(array135)
+    for i in array135
+      puts "Tên: #{@i.name} Tuổi: #{@i.tuoi135} Giới tính: #{@i.gioiTinh135} Địa chỉ: #{@i.diaChi135}"
     end
   end
-  def menu(array)
-    selection = 1
-    while selection <1 || selection >3
+  def menu(array135)
+    selection135 = 1
+    while selection135 <1 || selection135 >3
       puts "1: Thêm mới cán bộ\n2:Tìm kiếm theo họ tên\n3:Hiện thị thông tin về danh sách các cán bộ\n4:Thoát khỏi chương trình."
-      selection = gets
-      case selection
+      selection135 = gets
+      case selection135
       when 1
-        themMoi(array)
+        themMoi(array135)
       when 2
-        timKiem(array)
+        timKiem(array135)
       when 3
-        hienDanhSach(array)
+        hienDanhSach(array135)
       else
 
       end
@@ -88,7 +88,7 @@ class QLCB
   end
 end
 
-array = []
+array135 = []
 quanLy = QLCB.new()
-quanLy.menu(array)
+quanLy.menu(array135)
 
