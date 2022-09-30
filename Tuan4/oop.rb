@@ -86,3 +86,8 @@ class QLCB
     end
   end
 end
+
+array = []
+quanLy = QLCB.new()
+quanLy.menu(array)
+
